@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+{% include 'includes/_messages.html' %}
+
+<div class="row">
+  <div class="col-lg-5 col-xs-12 col-sm-12">
+      <h4 class="uk-margin-top">Your current balance is {{ balance }} KWC</h4>
+      {% from "includes/_formhelpers.html" import render_field %}
+      <form method="POST" action="">
+        <div class="from-group uk-margin-top ">
+          <!-- {{render_field(form.username, class_="form-control")}} -->
+          <input class="uk-form-width-large uk-form-large em  uk-width-1-1" name="username" placeholder="Username of Recipient"  type="text" id="username" required />
+        </div>
+        <div class="from-group uk-margin-top">
+          <!-- {{render_field(form.amount, class_="form-control")}} -->
+          <input class="uk-form-width-large uk-form-large em  uk-width-1-1" name="amount" placeholder="Amount"  type="number" id="amount" required />
+        </div>
+        </br>
+        <div class="form-submit">
+            <button  class=" uk-form-width-large uk-form-large bth uk-width-1-1"  type="submit"> Send Kwatcoin</button>
+          </div>
+      </form>
+
+  </div>
+  
+</div>
+{% endblock %}

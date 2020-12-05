@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<!-- ADAPTED FROM TEMPLATE at https://unpkg.com/-->
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kwatcoin</title>
+    <link rel="stylesheet" href="/static/dist/css/mycss.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="{{ url_for('static', filename = 'images/favicon.ico') }}">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Lato:400,400i|PT+Serif:700" rel="stylesheet"> -->
+  
+
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <!-- UIkit CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.10/dist/css/uikit.min.css" />
+
+ <!--Google Fonts-->
+ <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Montserrat:wght@200&family=Noto+Sans+JP:wght@900&family=Syne:wght@600&display=swap" rel="stylesheet">
+
+
+ <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400&display=swap" rel="stylesheet">
+
+<!-- UIkit JS -->
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.5.10/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.5.10/dist/js/uikit-icons.min.js"></script>
+</head>
+<body style="background-color:#FBFBFB;">
+        <div class="row  uk-height-viewport  heroback">
+
+
+            <nav class="uk-navbar-container uk-container" uk-navbar style="background-color:transparent;">
+
+                    <div class="uk-navbar-left">
+                        <a class="uk-navbar-item uk-logo" href="#">
+                          <img src="../static/images/klog.png" width="100px"/>
+                        </a>
+                        <ul class="uk-navbar-nav uk-text-capitalize">
+                            <li class=" hidden-xs visible-lg visible-md uk-margin-right">
+                           <a href="/register" style="text-transform: none; font-size:15px; font-family:Montserrat; color:#2E2E2E;">
+                              <b>Create a wallet</b>
+                           </a>
+                          </li>
+                
+                             <li class=" hidden-xs visible-lg visible-md  uk-margin-right">
+                           <a href="" style="text-transform: none; font-size:15px; font-family:Montserrat; color:#2E2E2E;">
+                              <b>Mine Kwatcoin</b>
+                           </a>
+                          </li>
+                
+                
+                            <li class=" hidden-xs visible-lg visible-md  uk-margin-right">
+                           <a href="" style="text-transform: none; font-size:15px; font-family:Montserrat; color:#2E2E2E;">
+                              <b>Exchange</b>
+                           </a>
+                          </li>
+                
+                
+                          
+                
+                            <li class=" hidden-xs visible-lg visible-md  uk-margin-right">
+                           <a href="" style="text-transform: none; font-size:15px; font-family:Montserrat; color:#2E2E2E;">
+                              <b>News</b>
+                           </a>
+                          </li>
+                
+                           <li class=" hidden-xs visible-lg visible-md  uk-margin-right">
+                           <a href="/login" style="text-transform: none; font-size:15px; font-family:Montserrat; color:#2E2E2E;">
+                              <b>Buy Kwatcoin</b>
+                           </a>
+                          </li>
+                
+                        </ul>
+                
+                    </div>
+                
+                    <div class="uk-navbar-right">
+                
+                        <ul class="uk-navbar-nav ">
+                            
+                            <li class=" hidden-xs visible-lg visible-md">
+                           <a href="/login" style="text-transform: none; font-size:15px; font-family:Montserrat; color:#2E2E2E;">
+                              <b>Login</b>
+                           </a>
+                          </li>
+                
+                          <li class=" hidden-lg">
+                            <a href="#modal-full" style="color:#F62F5E;" uk-toggle>
+                              <img class="uk-margin-right" src="../static/images/menu.png" width="30px">
+                            </a>
+                          
+                          </li>
+                        </ul>
+                
+                    </div>
+                </nav>
+
+                <div id="modal-full" class="uk-modal-full" uk-modal>
+                        <div class="uk-modal-dialog">
+                          <button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
+                          <div class= " uk-margin-top uk-grid-collapse uk-child-width-1-1@s uk-flex-middle" uk-grid>
+                          
+                            <div class="uk-padding-large text-center">
+                            <a href="/register" style="text-transform: none; font-size:15px; font-family:Montserrat; color:#2E2E2E;">
+                              <b><h3>Create a wallet</h3></b>
+                            </a>
+                
+                           <a href="" style="text-transform: none; font-size:15px; font-family:Montserrat; color:#2E2E2E;">
+                              <b><h3>Mine Kwatcoin</h3></b>
+                           </a>
+                
+                           <a href="" style="text-transform: none; font-size:15px; font-family:Montserrat; color:#2E2E2E;">
+                              <b><h3>News</h3></b>
+                           </a>
+                
+                           <a href="" style="text-transform: none; font-size:15px; font-family:Montserrat; color:#2E2E2E;">
+                              <b><h3>Exchange</h3></b>
+                           </a>
+                
+                           <a href="/login" style="text-transform: none; font-size:15px; font-family:Montserrat; color:#2E2E2E;">
+                              <b><h3>Login</h3></b>
+                           </a>
+                      
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+
+
+                      <div class="hrt"></div>
+
+
+                      <div class="heroc hidden-xs" > 
+                            <div class="row uk-container uk-margin-large-top">
+                               <div class="col-lg-6 col-xs-12 col-md-12 col-sm-6">
+                                     <div class="tophs uk-margin-large-left uk-margin-large-top text-left">
+                                      Mine Kwatcoin from the comfort of your home
+                                       </div>
+                     
+                                       <div class=" uk-margin-large-left text-left uk-margin-top">
+                                         Kwatcoin is an open access to digital money and data-friendly 
+                                         services for everyone – no matter your background
+                                          or location. Kwatcoin is open to you, all you need is a wallet.
+                                       </div>
+                     
+                                        <div class=" uk-margin-large-left text-left uk-margin-top">
+                                        
+                                       <button  class=" uk-margin-right bth uk-margin-top uk-width-1-1 uk-button-large   ">Coming Soon</button>
+                                       </div>
+                                   </div>
+                     
+                                    <div class=" uk-margin-top col-lg-6 col-xs-12 col-md-12 col-sm-6">
+                                      
+                                     <img  class="" src="../static/images/min.png"/>
+                                     
+                     
+                                   </div>
+                            </div>
+                     
+                     
+                            
+                                 
+                               </div>
+     
+   
+
+
+
+
+
+     <div class="heroc hidden-lg hidden-md hidden-sm" > 
+       <div class="row uk-container uk-margin-large-top">
+
+
+
+          <div class=" col-lg-6 col-xs-12 col-md-12 col-sm-6">
+                 
+                <img  class="" src="../static/images/coin.png"/>
+                
+
+              </div>
+
+
+
+
+
+
+          <div class="col-lg-6 col-xs-12 col-md-12 col-sm-6">
+                <div class="tophs  uk-margin-top text-left">
+                  We see a different future for payment
+                  </div>
+
+                  <div class="  text-left uk-margin-top">
+                    Kwatcoin is an open access to digital money and data-friendly 
+                    services for everyone – no matter your background
+                     or location. Kwatcoin is open to you, all you need is a wallet.
+                  </div>
+
+                   <div class="  text-left uk-margin-top">
+                        <a href="/register">
+                  <button  class=" uk-margin-right bth uk-width-1-1 uk-margin-top uk-button-large   ">Create a wallet</button>
+                        </a>
+
+                    <a href="/register">
+                  <button  class=" bthw uk-margin-top uk-width-1-1  uk-button-large">Mine Kwatcoin</button>
+                    </a>
+                  </div>
+              </div>
+
+              
+       </div>   
+          
+          </div>
+        <footer class="site-footer">
+            <div class="container">
+
+            </div>
+        </footer>
+    </div>
+    <script src="/static/dist/js/main.min.js"></script>
+
+</body>
+</html>

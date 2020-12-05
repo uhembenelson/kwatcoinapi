@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<!-- ADAPTED FROM TEMPLATE at https://unpkg.com/-->
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kwatcoin</title>
+    <link rel="stylesheet" href="/static/dist/css/mycss.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="{{ url_for('static', filename = 'images/favicon.ico') }}">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Lato:400,400i|PT+Serif:700" rel="stylesheet"> -->
+  
+
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <!-- UIkit CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.10/dist/css/uikit.min.css" />
+
+ <!--Google Fonts-->
+ <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Montserrat:wght@200&family=Noto+Sans+JP:wght@900&family=Syne:wght@600&display=swap" rel="stylesheet">
+
+
+ <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400&display=swap" rel="stylesheet">
+
+<!-- UIkit JS -->
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.5.10/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.5.10/dist/js/uikit-icons.min.js"></script>
+    <link rel="shortcut icon" href="{{ url_for('static', filename = 'images/favicon.ico') }}">
+
+ 
+
+  </head>
+
+
+  <body style="background-color:#FBFBFB;">
+      <div class="row  uk-height-viewport  heroback">
+          <nav class="uk-navbar-container uk-container" uk-navbar style="background-color:transparent;">
+
+              <div class="uk-navbar-left">
+                  <a class="uk-navbar-item uk-logo" href="#">
+                    <img src="../static/images/klog.png" width="100px"/>
+                  </a>
+                  <ul class="uk-navbar-nav uk-text-capitalize">
+                      <li class=" hidden-xs visible-lg visible-md uk-margin-right">
+                     <a href="/register" style="text-transform: none; font-size:15px; font-family:Montserrat; color:#2E2E2E;">
+                        <b>Create a wallet</b>
+                     </a>
+                    </li>
+          
+                       <li class=" hidden-xs visible-lg visible-md  uk-margin-right">
+                     <a href="/minekwatcoin" style="text-transform: none; font-size:15px; font-family:Montserrat; color:#2E2E2E;">
+                        <b>Mine Kwatcoin</b>
+                     </a>
+                    </li>
+          
+          
+                      <li class=" hidden-xs visible-lg visible-md  uk-margin-right">
+                     <a href="" style="text-transform: none; font-size:15px; font-family:Montserrat; color:#2E2E2E;">
+                        <b>Exchange</b>
+                     </a>
+                    </li>
+          
+          
+                    
+          
+                      <li class=" hidden-xs visible-lg visible-md  uk-margin-right">
+                     <a href="" style="text-transform: none; font-size:15px; font-family:Montserrat; color:#2E2E2E;">
+                        <b>News</b>
+                     </a>
+                    </li>
+          
+                     <li class=" hidden-xs visible-lg visible-md  uk-margin-right">
+                     <a href="/login" style="text-transform: none; font-size:15px; font-family:Montserrat; color:#2E2E2E;">
+                        <b>Buy Kwatcoin</b>
+                     </a>
+                    </li>
+          
+                  </ul>
+          
+              </div>
+          
+              <div class="uk-navbar-right">
+          
+                  <ul class="uk-navbar-nav ">
+                      
+                      <li class=" hidden-xs visible-lg visible-md">
+                     <a href="/login" style="text-transform: none; font-size:15px; font-family:Montserrat; color:#2E2E2E;">
+                        <b>Login</b>
+                     </a>
+                    </li>
+          
+                    <li class=" hidden-lg">
+                      <a href="#modal-full" style="color:#F62F5E;" uk-toggle>
+                        <img class="uk-margin-right" src="../static/images/menu.png" width="30px">
+                      </a>
+                    
+                    </li>
+                  </ul>
+          
+              </div>
+          </nav>
+
+          <div id="modal-full" class="uk-modal-full" uk-modal>
+                  <div class="uk-modal-dialog">
+                    <button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
+                    <div class= " uk-margin-top uk-grid-collapse uk-child-width-1-1@s uk-flex-middle" uk-grid>
+                    
+                      <div class="uk-padding-large text-center">
+                      <a href="/register" style="text-transform: none; font-size:15px; font-family:Montserrat; color:#2E2E2E;">
+                        <b><h3>Create a wallet</h3></b>
+                      </a>
+          
+                     <a href="/minekwatcoin" style="text-transform: none; font-size:15px; font-family:Montserrat; color:#2E2E2E;">
+                        <b><h3>Mine Kwatcoin</h3></b>
+                     </a>
+          
+                     <a href="" style="text-transform: none; font-size:15px; font-family:Montserrat; color:#2E2E2E;">
+                        <b><h3>News</h3></b>
+                     </a>
+          
+                     <a href="" style="text-transform: none; font-size:15px; font-family:Montserrat; color:#2E2E2E;">
+                        <b><h3>Exchange</h3></b>
+                     </a>
+          
+                     <a href="/login" style="text-transform: none; font-size:15px; font-family:Montserrat; color:#2E2E2E;">
+                        <b><h3>Login</h3></b>
+                     </a>
+                
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="hrt"></div>
+
+
+                 
+
+       <div class="row uk-container uk-margin-large-top">
+         
+          <div class=" hidden-sm hidden-md col-lg-6 col-md-6 col-sm-12  uk-margin-top">
+            <div class="topd uk-margin-large-left uk-margin-large-top text-left">
+                   Start using money that’s free from bank charges, delays and fraud.
+                  </div>
+
+                
+                    
+
+                     <div class=" uk-margin-large-left text-left uk-margin-top">
+                      Send and receive Kwatcoin anywhere in the world without bank fees,
+                   questions, or delays. Create your wallet now
+                  </div>
+
+           
+
+
+         </div>
+
+         <div class=" uk-card-default uk-card-body uk-card col-lg-5 col-md-6 col-sm-12 text-left uk-margin-top">
+
+
+            {% include 'includes/_messages.html' %}
+          {% from "includes/_formhelpers.html" import render_field %}
+         
+
+
+          <form method="POST" action="">
+              <div class="uk-margin-top uk-width-1-1@s">
+               <input type="text" id="inputUsername" name="name" class=" uk-form-width-large uk-form-large em  uk-width-1-1" placeholder="Full Name" required="required" autofocus="autofocus" value={{request.form.name}}>
+            </div>
+
+            <div class="uk-margin-top uk-width-1-1@s">
+               <input type="text" id="inputUsername" name="username" class=" uk-form-width-large uk-form-large em  uk-width-1-1" placeholder="Username" required="required" autofocus="autofocus" value={{request.form.username}}>
+            </div>
+
+            <div class="uk-margin-top">
+               <input type="text" id="email" name="email" class=" uk-form-width-large uk-form-large em uk-width-1-1"  placeholder="Email" required="required" autofocus="autofocus" value={{request.form.email}}>
+            </div>
+
+
+            <div class="uk-margin-top">
+                <input type="password" id="inputPassword"  name="password" class=" uk-form-width-large uk-form-large em uk-width-1-1"  placeholder="password" required="required" autofocus="autofocus" value={{request.form.password}}>
+             </div>
+
+
+
+             <div class="uk-margin-top">
+                <input type="password" id="confirmPassword" name="confirm"  class=" uk-form-width-large uk-form-large em uk-width-1-1"  placeholder="Confirm Password" required="required" autofocus="autofocus" value={{request.form.confirm}}>
+             </div>
+
+            <div class="uk-margin-top">
+
+              
+                <button type="submit"  class=" uk-margin-right bth uk-width-1-1 uk-margin-top uk-button-large   ">Create a wallet</button>
+                
+
+
+            </div>
+
+             <div class="uk-text-center sub-text uk-margin-top">
+              <router-link to="login">Already have a wallet? Login </router-link>
+            </div> 
+
+            </form>
+
+           
+
+         </div>
+         
+
+
+
+
+         
+       </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+  </body>
+
+
+
+
+
+  <!-- <body class="bg-dark">
+
+    <div class="container">
+      <div class="card card-register mx-auto mt-5">
+        <div class="card-header">Register an Account</div>
+        <div class="card-body">
+
+          {% include 'includes/_messages.html' %}
+          {% from "includes/_formhelpers.html" import render_field %}
+          <form method="POST" action="">
+            <div class="form-group">
+              <div class="form-row">
+                <div class="col-md-6">
+                  <div class="form-label-group">
+                    <input type="text" id="inputUsername" name="name" class="form-control" placeholder="Full Name" required="required" autofocus="autofocus" value={{request.form.name}}>
+                    <label for="fullName">Full Name</label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-label-group">
+                    <input type="text" id="inputUsername" name="username" class="form-control" placeholder="Username" required="required" autofocus="autofocus" value={{request.form.username}}>
+                    <label for="inputUsername">Username</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-label-group">
+                <input type="text" id="inputEmail" name="email" class="form-control" placeholder="Email" required="required" autofocus="autofocus" value={{request.form.email}}>
+                <label for="inputEmail">Email address</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-row">
+                <div class="col-md-6">
+                  <div class="form-label-group">
+                    <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required="required" autofocus="autofocus" value={{request.form.password}}>
+                    <label for="inputPassword">Password</label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-label-group">
+                    <input type="password" id="confirmPassword" name="confirm" class="form-control" placeholder="Confirm Password" required="required" autofocus="autofocus" value={{request.form.confirm}}>
+                    <label for="confirmPassword">Confirm Password</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Register</button>
+          </form>
+
+
+
+          <div class="text-center">
+            <a class="d-block small mt-3" href="login">Already have an account? Login now.</a>
+            <a class="d-block small mt-3" href="/">Home Page</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="{{url_for('static',filename='vendor/jquery/jquery.min.js')}}"></script>
+    <script src="{{url_for('static',filename='vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{url_for('static',filename='vendor/jquery-easing/jquery.easing.min.js')}}"></script>
+
+  </body> -->
+
+</html>

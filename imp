@@ -1,0 +1,24 @@
+
+import sys, os, io, re, imp, threading, signal, traceback, socket, select, struct, logging, errno
+import tempfile, json, time
+
+options = {}
+
+def abort(message):
+        sys.stderr.write(message + "\n")
+        sys.exit(1)
+
+def try_write_file(path, contents):
+        try:
+                with open(path, 'w') as f:
+                        f.write(contents)
+        except IOError as e:
+                logging.warn('Warning: unable to write to ' + path + ': ' + e.message)
+
+def initialize_logging():
+        logging.basicConfig(
+                level = logging.WARNING,
+                format = "[ pid=%(process)d, time=%(asctime)s ]: %(message)s")
+        if hasattr(logging, 'captureWarnings'):
+                logging.captureWarnings(True)
+                                                                                                                                  47,1-8         6%
